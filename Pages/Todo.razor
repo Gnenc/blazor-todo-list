@@ -1,0 +1,66 @@
+﻿@page "/todo"
+
+<h3>Todo (@todos.Count((todo => !todo.IsDone)))</h3>
+
+<ul>
+    @{
+        int i = 0;
+        foreach (var todo in todos)
+        {
+            int local_i = i;
+            if (!todo.IsDone)
+            {
+                <li>
+                    <input type="checkbox" @onchange="(() => CheckTodo(todo))" value="@todo.IsDone" @key="@local_i" />
+                    <input @bind="todo.Title" disabled="@todo.IsDone" />
+                </li>
+            }
+            i++;
+        }
+    }
+</ul>
+
+<input placeholder="Something todo" @bind="newTodo" />
+<MatButton @onclick="AddTodo">Add todo</MatButton>
+
+<h3>Done (@todos.Count((todo => todo.IsDone)))</h3>
+
+<ul>
+    @{
+        int j = 0;
+        foreach (var todo in todos)
+        {
+            int local_j = j;
+            if (todo.IsDone)
+            {
+                <li>
+                    <input type="checkbox" @onchange="(() => CheckTodo(todo))" value="@todo.IsDone" @key="@local_j" />
+                    <input @bind="todo.Title" disabled="@todo.IsDone" />
+                </li>
+            }
+            j++;
+        }
+    }
+</ul>
+
+@code {
+    private IList<TodoItem> todos = new List<TodoItem>();
+    private string newTodo;
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo });
+            newTodo = string.Empty;
+        }
+    }
+
+    private void CheckTodo(TodoItem todoItem)
+    {
+        todoItem.IsDone = !todoItem.IsDone;
+        /*todoItem.Title = "abc";
+        var x = todoItem.Title;
+        Console.WriteLine(x);*/
+    }
+
+}
