@@ -105,7 +105,7 @@ using TodoList.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 61 "/home/gonenc/Desktop/test_app/Blazor/TodoList/Pages/TodoTable.razor"
+#line 62 "/home/gonenc/Desktop/test_app/Blazor/TodoList/Pages/TodoTable.razor"
        
     private List<TodoModel> Todos = new List<TodoModel>();
     string myTodoText = null;
