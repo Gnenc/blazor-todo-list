@@ -111,39 +111,6 @@
         }
       },
       {
-        "HashCode": 541991879,
-        "Kind": "Components.Component",
-        "Name": "TodoList.Pages.TodoTable",
-        "AssemblyName": "TodoList",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "TodoTable"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "TodoList.Pages.TodoTable"
-        }
-      },
-      {
-        "HashCode": 1509450136,
-        "Kind": "Components.Component",
-        "Name": "TodoList.Pages.TodoTable",
-        "AssemblyName": "TodoList",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "TodoList.Pages.TodoTable"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "TodoList.Pages.TodoTable",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1220224215,
         "Kind": "Components.Component",
         "Name": "TodoList.Pages.Todo",
